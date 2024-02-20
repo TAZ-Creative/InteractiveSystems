@@ -1,2 +1,2 @@
 # InteractiveSystems
- Developments of Interactive Systems
+ Development of Interactive Systems

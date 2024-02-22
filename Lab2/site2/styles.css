@@ -23,6 +23,11 @@ section {
   height: 88px;
 }
 
+.hide-nav {
+  display: none;
+}
+
+
 p {
   font-weight: 400;
 }

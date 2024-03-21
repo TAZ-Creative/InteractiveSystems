@@ -1,0 +1,61 @@
+import {useState} from 'react';
+import logo from './logo.svg';
+import About from './About';
+import './App.css';
+
+function TestingComponent({mohammed, ClickFunction})
+{
+
+  return (
+    <button onClick={ClickFunction}>Clicked Me {mohammed} time</button>
+  );
+}
+
+function SignUp()
+{
+  return (
+    <button>Sign up</button>
+  );
+}
+
+function LogIn()
+{
+  return (
+    <button>Log In</button>
+  );
+}
+
+let isNewUser = false;
+let content;
+/*
+if(isNewUser)
+{
+  content = <SignUp/>;
+}
+else
+{
+  content = <LogIn/>;
+}
+*/
+
+function App() {
+  const [count,setCount] = useState(0);
+  function handleClick()
+  {
+    setCount(count +1);
+    // alert('Button was clicked');
+}
+  return (
+    <>
+    <h1>Hello to our first app</h1>
+    <p>This is a test for paragraph</p>
+    <TestingComponent mohammed={count} ClickFunction ={handleClick}/>
+    <TestingComponent mohammed={count} ClickFunction ={handleClick}/>
+    <About />
+    {isNewUser? <SignUp/>: <LogIn/>}
+    </>
+  );
+}
+
+
+export default App;

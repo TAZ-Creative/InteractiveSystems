@@ -5,6 +5,8 @@ import { Contact } from './components/Contact'; // Import the Contact component
 import './App.css';
 import { Header } from './components/Header';
 import { Admin } from './components/Admin';
+import { ProductDetail } from './components/ProductDetail';
+import { NotFound } from './components/Notfound';
 
 function App() {
 
@@ -16,10 +18,11 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
-        <Route path="/product" element={<ProductList/>}></Route>
+        <Route path="/product/" element={<ProductList/>}></Route>
+        <Route path="/product/:id" element={<ProductDetail/>}></Route>
         <Route path="/contact" element={<Contact/>}></Route>
         <Route path="/admin" element={isAdmin ? <Admin /> : <Navigate to="/" />} />
-
+        <Route path='*' element={<NotFound />}></Route>
       </Routes>
 
       <footer>FOOTER</footer>  

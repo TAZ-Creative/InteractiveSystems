@@ -18,8 +18,6 @@ function App() {
       .then( (resp) => resp.json() )
       .then( (data) => setmovieResults(data.results) /*;console.log(data);*/)
 
-      //useEffect( )) => 
-
   },[])
 
   const handleonSubmit = (e) => {

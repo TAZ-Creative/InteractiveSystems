@@ -1,0 +1,52 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header ul li {
+    display: inline;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.job-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.job-card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.job-card p {
+    margin: 0.5rem 0;
+}

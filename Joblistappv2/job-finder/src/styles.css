@@ -107,3 +107,60 @@ body {
     margin: 0.5rem 0;
   }
   
+/* Search bar styling */
+.search-container {
+    margin: 1rem auto;
+    width: 60%;
+    max-width: 500px;
+  }
+  
+  /* Hero section styling */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #f0f0f0;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero img {
+    width: 40%;
+    max-width: 400px;
+  }
+  
+  /* Jobs this week section styling */
+  .jobs-this-week {
+    padding: 2rem;
+  }
+  
+  .jobs-this-week h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .job-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem; 
+  }
+  
+  /* Contact section styling */
+  .contact {
+    padding: 2rem;
+    text-align: center; /* Center align contact text */
+  }
+  
+  .contact a {
+    color: #007bff;
+    text-decoration: none; /* Remove underline from email link */
+  }
+  
+  .contact a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  

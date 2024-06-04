@@ -1,52 +1,109 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-header, footer {
+  }
+  .App {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  header,
+  footer {
     background-color: #333;
     color: white;
     padding: 1rem;
-}
-
-header ul {
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 1rem;
+  }
+  
+  .nav__logo {
+    color: #fff;
+    transition: color 0.4s;
+  }
+  
+  
+  header ul {
     list-style: none;
     display: flex;
     gap: 1rem;
-}
-
-header ul li {
+  }
+  
+  header ul li {
     display: inline;
-}
-
-header ul li a {
+  }
+  
+  header ul li a {
     color: white;
     text-decoration: none;
-}
-
-footer {
+  }
+  .search-form {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+    padding: 12px;
+  }
+  .search-input {
+    width: 100%;
+    padding: 8px;
+    height: 48px;
+    border: unset;
+    background-color: #f7f7f7;
+    color: #333;
+    font-size: 16px;
+    font-family: inherit;
+  }
+  button[type="submit"] {
+    border: unset;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    /* height: px; */
+    cursor: pointer;
+  }
+  .single-job_page {
+    padding: 0 24px;
+  }
+  pre {
+    white-space: pre-wrap;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: 1.9;
+  }
+  
+  footer {
     text-align: center;
-}
-
-h1 {
+  }
+  
+  h1 {
     text-align: center;
     margin-top: 2rem;
-}
-
-.job-card {
+  }
+  
+  .job-card {
     border: 1px solid #ccc;
     padding: 1rem;
     margin: 1rem;
     cursor: pointer;
-}
-
-.job-card h3 {
+  }
+  
+  .job-card h3 {
     margin: 0;
     font-size: 1.25rem;
-}
-
-.job-card p {
+  }
+  
+  .job-card p {
     margin: 0.5rem 0;
-}
+  }
+  

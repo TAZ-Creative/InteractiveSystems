@@ -38,11 +38,16 @@ const JobPage = () => {
     }
 
     return (
-        <div>
+        <div className="job-details-container">
             <h1>{jobDetails.title}</h1>
-            <p>{jobDetails.description}</p>
-            <p>Location: {jobDetails.location}</p>
-            <p>Company: {jobDetails.company.name}</p>
+            <p className="job-description">{jobDetails.description}</p>
+            <p className="job-details">
+                <span className="detail-label">Location:</span> {jobDetails.location}
+            </p>
+            <p className="job-details">
+                <span className="detail-label">Company:</span> {jobDetails.company.name}
+            </p>
+            {/* Add additional details sections here if needed */}
         </div>
     );
 };

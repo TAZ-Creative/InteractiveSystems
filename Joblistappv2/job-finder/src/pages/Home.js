@@ -38,8 +38,8 @@ const Home = () => {
       <Search />  {/* Search component moved to the top */}
 
       <section className="hero">
-        <div>
-          <h1>Find Jobs in Estonia</h1>
+        <div className='hero-text'>
+          <h1 className='big-text'>Find Recently Posted Jobs in Estonia</h1>
           <p>Search for your dream job in Estonia, the heart of digital innovation. Explore exciting opportunities across various industries and companies.</p>
         </div>
         <img src="heroimg.png" alt="Hero Image" />

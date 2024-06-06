@@ -39,6 +39,7 @@ const JobPage = () => {
 
     return (
         <div className="job-details-container">
+            <img src={job.company.logo}></img>
             <h1>{jobDetails.title}</h1>
             <p className="job-description">{jobDetails.description}</p>
             <p className="job-details">
@@ -47,7 +48,6 @@ const JobPage = () => {
             <p className="job-details">
                 <span className="detail-label">Company:</span> {jobDetails.company.name}
             </p>
-            {/* Add additional details sections here if needed */}
         </div>
     );
 };

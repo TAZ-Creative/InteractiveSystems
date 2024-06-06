@@ -1,5 +1,5 @@
 body {
-    font-family: "Arial", sans-serif;
+    font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,6 +10,9 @@ body {
     justify-content: space-between;
     flex-direction: column;
   }
+
+
+
   header,
   footer {
     background-color: #333;
@@ -93,6 +96,7 @@ body {
   
   .job-card {
     border: 1px solid #ccc;
+    max-width: 300px;
     padding: 1rem;
     margin: 1rem;
     cursor: pointer;
@@ -118,21 +122,32 @@ body {
   .hero {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 2rem;
     background-color: #f0f0f0;
   }
   
   .hero h1 {
-    font-size: 2rem;
+    font-size: 50px;
     margin-bottom: 1rem;
+    width: 600px;
+    text-align: left;
+  
+  }
+
+  .hero p {
+    text-align: left;
+    width: 500px;
+    font-size: 24px;
   }
   
   .hero img {
     width: 40%;
     max-width: 400px;
   }
-  
+  .hero .hero-text {
+    width: 50%;
+    margin-left: 32px;
+  }
   /* Jobs this week section styling */
   .jobs-this-week {
     padding: 2rem;
@@ -145,8 +160,8 @@ body {
   .job-card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1rem; 
+   
+    gap: 0.5rem; 
   }
   
   /* Contact section styling */
@@ -221,5 +236,112 @@ body {
   .detail-label {
     font-weight: bold;
     margin-right: 0.5rem;
+  }
+
+ 
+
+  .search-form {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    max-width: 500px;
+    margin: 1rem auto;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden; /* Prevent text overflow */
+  }
+  
+  .search-form input {
+    padding: 0.5rem 1rem;
+    border: none;
+    font-family: inherit; 
+    flex: 1; 
+  }
+  
+  .search-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .search-form button:hover {
+    background-color: #222;
+  }
+  
+  .search-form button i {
+    font-size: 1.2rem;
+  }
+
+  header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between; /* Space items evenly */
+    align-items: center;
+  }
+  
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  header nav img {
+    width: 80px; 
+    height: auto; 
+  }
+  
+  .nav-items {
+    display: flex;
+    list-style: none;
+    margin-left: auto;  
+    padding: 0;
+  }
+  
+  .nav-items li {
+    margin-left: 1rem; 
+  }
+  
+  .nav-items a {
+    text-decoration: none; 
+    color: #ffffff; 
+  }
+  
+  .nav-items a:hover {
+    color: #36d1f4;
+  }
+  
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;  /* Adjust gap for spacing between elements */
+    }
+  
+    .nav-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;  /* Adjust gap for spacing between links */
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .nav-items.open {
+      display: block;  /* Show menu items when open on mobile */
+    }
+  
+    .menu-toggle {
+      display: block;  /* Show menu toggle button on mobile */
+    }
   }
   

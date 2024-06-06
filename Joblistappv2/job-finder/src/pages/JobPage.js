@@ -39,7 +39,7 @@ const JobPage = () => {
 
     return (
         <div className="job-details-container">
-            <img src={job.company.logo}></img>
+            <img src={jobDetails.company.logo}></img>
             <h1>{jobDetails.title}</h1>
             <p className="job-description">{jobDetails.description}</p>
             <p className="job-details">

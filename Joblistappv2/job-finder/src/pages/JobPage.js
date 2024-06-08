@@ -35,7 +35,10 @@ const JobPage = () => {
     }, [id]);
 
     if (!jobDetails) {
-        return <p>Loading...</p>;
+        return <div className="loading-icon">
+                    <p>Loading jobs...</p>  
+                    <img src="loading.gif" alt="Loading" />
+                </div>;
     }
 
     return (

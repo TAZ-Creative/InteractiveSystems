@@ -64,11 +64,20 @@ const Home = () => {
         )}
       </section>
 
+      <div className="hero">
+            <p>Didn't find your dream job? Search for specific roles or companies using the search bar below.</p>
+            <Search /> 
+      </div>
+      
       <section className="contact">
         <h2>Contact the Creator</h2>
         <p>Feel free to contact us with any questions or feedback: <a href="mailto:azeem@tazcreative.io">azeem@tazcreative.io</a></p>
       </section>
+
+      
     </div>
+
+        
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import APIKey from '../config';
+import Button from '../components/Button';
 
 const JobPage = () => {
     const { id } = useParams();
@@ -48,6 +49,14 @@ const JobPage = () => {
             <p className="job-details">
                 <span className="detail-label">Company:</span> {jobDetails.company.name}
             </p>
+
+            <Button
+                title="Apply Now"
+                link={jobDetails.url} 
+                target="_blank" 
+                color="primary" 
+            />
+
         </div>
     );
 };

@@ -5,6 +5,8 @@ import APIKey from '../config';
 
 const Home = () => {
   const [jobs, setJobs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // Add state for loading
+
 
   useEffect(() => {
     const fetchJobs = async () => {
@@ -21,12 +23,14 @@ const Home = () => {
         );
         const data = await response.json();
         if (data.success) {
-          setJobs(data.data.slice(0, 15)); // Get only the first 15 jobs for "Jobs this week" section
+          setJobs(data.data.slice(0, 25)); // Get only the first 15 jobs for "Jobs this week" section
         } else {
           console.error('Error fetching jobs:', data.message);
         }
       } catch (error) {
         console.error('Error fetching jobs:', error);
+      } finally {
+        setIsLoading(false); // Set loading to false after fetching (success or error)
       }
     };
 
@@ -35,7 +39,7 @@ const Home = () => {
 
   return (
     <div>
-      <Search />  {/* Search component moved to the top */}
+      <Search />  
 
       <section className="hero">
         <div className='hero-text'>
@@ -47,11 +51,17 @@ const Home = () => {
 
       <section className="jobs-this-week">
         <h2>Job Vacancies in Estonia This Week</h2>
-        <div className="job-card-container">
-          {jobs.map((job) => (
+          {isLoading ? (
+           <div className="loading-icon">
+           <img src="Joblistappv2/job-finder/public/assets/loading.gif" alt="Loading" />
+           </div>
+         ) : (
+           <div className="job-card-container">
+            {jobs.map((job) => (
             <Jobcards key={job.id} job={job} />
-          ))}
-        </div>
+           ))}
+         </div>
+          )}
       </section>
 
       <section className="contact">

@@ -19,7 +19,7 @@ const Header = () => {
           <li><Link to="/about">About</Link></li>
         </ul>
         <button className="menu-toggle" onClick={toggleMenu}>
-          <i className="fas fa-bars"></i> {/* Replace with your desired icon */}
+          <i className="fas fa-bars"></i> 
         </button>
       </nav>
     </header>

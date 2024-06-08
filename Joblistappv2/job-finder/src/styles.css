@@ -333,6 +333,20 @@ body {
   }
 
 
+  /* Loading */
+
+  .loading-icon {
+    text-align: center; 
+    margin: 1rem 0;
+  }
+  
+  .loading-icon img {
+    width: 50px; 
+    height: 50px; 
+    margin-bottom: 0.5rem; 
+  }
+
+
 
 
 @media (max-width: 768px) {

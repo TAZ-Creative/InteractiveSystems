@@ -7,7 +7,6 @@ const Home = () => {
   const [jobs, setJobs] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Add state for loading
 
-
   useEffect(() => {
     const fetchJobs = async () => {
       try {
@@ -23,7 +22,7 @@ const Home = () => {
         );
         const data = await response.json();
         if (data.success) {
-          setJobs(data.data.slice(0, 25)); // Get only the first 15 jobs for "Jobs this week" section
+          setJobs(data.data.slice(0, 25)); // Get only the first 25 jobs
         } else {
           console.error('Error fetching jobs:', data.message);
         }
@@ -39,7 +38,7 @@ const Home = () => {
 
   return (
     <div>
-      <Search />  
+      <Search />
 
       <section className="hero">
         <div className='hero-text'>
@@ -51,17 +50,18 @@ const Home = () => {
 
       <section className="jobs-this-week">
         <h2>Job Vacancies in Estonia This Week</h2>
-          {isLoading ? (
-           <div className="loading-icon">
-           <img src="Joblistappv2/job-finder/public/assets/loading.gif" alt="Loading" />
-           </div>
-         ) : (
-           <div className="job-card-container">
+        {isLoading ? (
+          <div className="loading-icon">
+            <p>Loading jobs...</p>  
+            <img src="loading.gif" alt="Loading" />
+          </div>
+        ) : (
+          <div className="job-card-container">
             {jobs.map((job) => (
-            <Jobcards key={job.id} job={job} />
-           ))}
-         </div>
-          )}
+              <Jobcards key={job.id} job={job} />
+            ))}
+          </div>
+        )}
       </section>
 
       <section className="contact">
